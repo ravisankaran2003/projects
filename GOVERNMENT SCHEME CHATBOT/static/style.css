@@ -1,0 +1,485 @@
+/* Width */
+::-webkit-scrollbar {
+  width: 10px;
+
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+::placeholder{
+  color: #fff;
+}
+
+
+
+
+
+.loading {
+  display: flex;
+  align-items: center;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color:white;
+  margin: 0 5px;
+  animation: bounce 0.5s infinite alternate;
+  display: inline-block;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+.dot:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.dot:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+
+
+.question-link {
+    list-style: none;
+    padding: 4px 0;
+}
+
+.question-link::after,
+.question-link::before {
+    content: "";
+    position:absolute;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    transition: all 0.6s ease-in-out;
+}
+
+.question-link::after {
+    top: 0;
+    right: 0;
+    transform-origin: right;
+
+}
+
+.question-link::before {
+    left: 0;
+    bottom: 0;
+    transform-origin: left;
+}
+
+.question-link:hover::after,
+.question-link:hover::before {
+    width: 100%;
+    border-radius:55px;
+}
+body,html{
+  align-items: center;
+	margin: 0;
+	background: rgb(44, 47, 59);
+	background: url('/static/images/background.mp4');
+ 
+}
+
+.chat-container {
+    max-width:850px;
+    margin: 50px auto;
+    margin-bottom:-20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+
+
+.chat-header {
+  background-color: rgba(255, 255, 255, 0.036)  !important; 
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border: 1px;
+    backdrop-filter: blur(5px);
+    border-top: 1px;
+    border-left: 1px;
+    border-right: 1px;
+    border-color: white;
+}
+.bot-icontop{
+    height: 80px;
+    width: 80px;
+}
+
+.chat-box {
+    height: 480px;
+    overflow-y: auto;
+    overflow:hide;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.036)  !important; 
+    backdrop-filter: blur(5px);
+}
+
+.user-message, .bot-message {
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.user-message {
+    background-color: transparent;
+    color: white;
+    border-radius: 50px;
+    float: right;
+    clear: both;
+    max-width: 70%;
+}
+.usermess{
+margin-right: 20px;
+font-size: 16px;
+font-weight: 600;
+}
+
+
+.bot-message {
+    background-color: transparent;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #fffefe;
+    border-radius:50px;
+    float:left;
+    clear: both;
+    max-width: 90%;
+    
+}
+
+.chat-input{
+    background-color: rgb(255, 251, 251) !important;
+}
+#user-input{
+    background-color: transparent;
+    border: none;
+    color: white;
+   }
+
+.chat-input {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.036)  !important; 
+    backdrop-filter: blur(5px);   
+}
+
+.chat-input input[type="text"] {
+    width: calc(100% - 50px);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.chat-input button {
+    width: 80px;
+    margin-right: 10px;
+    margin-left: 15px;
+    height: 40px;
+    background-color: #58cc71;
+    color: rgb(253, 253, 253);
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.chat-input button:hover {
+  color: rgba(255, 255, 255, 1);
+  box-shadow: 0 5px 15px rgba(63, 224, 77, 0.87);
+}
+
+.chat-input button i {
+    font-size: 18px;
+}
+
+
+.user-icon,
+        .bot-icon {
+            width: 30px; /* Adjust the width as needed */
+            height: 30px; /* Adjust the height as needed */
+            margin-right: 10px; /* Adjust the margin as needed */
+            border-radius: 5%; /* To make the image circpar */
+        }
+  .question-link{
+            cursor: pointer;
+            font-weight: 600;
+            color: #ffffff;
+            text-decoration: none;
+            margin: 10px;
+            display:inline-block;
+            padding: 15px;
+            border-radius:10px;
+            background-color: #4478e1ee;
+            position: relative;
+            perspective: 1000px; /* Adding perspective to create 3D effect */
+            transition: transform 0.5s;
+        }
+        
+          
+          
+          
+          @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+p {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+a {
+    font-family: Poppins;
+    font-size: 12px;
+    text-decoration: none;
+    color: #fff;
+}
+
+
+.string {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  animation: move 4s infinite;
+}
+
+.greeting {
+  position: relative;
+  top: 8.6vmin;
+  animation: white-out 5s infinite;
+}
+
+.closure::after {
+  content: '';
+  position: absolute;
+  height: 25vmin;
+  width: 40vmin;
+  background: #282c34;
+  transform: translate(-45vmin, -24.5vmin);
+}
+
+.closure::before {
+  content: '';
+  position: absolute;
+  height: 25vmin;
+  width: 40vmin;
+  background: #282c34;
+  transform: translate(-40vmin, 5vmin);
+}
+
+.en {
+  color: #fa8231;
+}
+
+.es {
+  color: white;
+}
+
+.de {
+  color: #c678dd;
+}
+
+.it {
+  color: #a9b0bd;
+}
+.typewriter{
+    overflow: hidden; /* Ensures the text is hidden until revealed */
+    white-space: nowrap; /* Keeps text on a single line */
+    margin: 0 auto ; /* Centers the text */
+    animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+  }
+
+/* CSS for fade-in animation */
+@keyframes fadeIn {
+    0% {
+      opacity: 0; /* Start with opacity 0 */
+    }
+    100% {
+      opacity: 1; /* Fade in to fpl opacity */
+    }
+  }
+  
+  /* Apply fade-in animation to p element */
+  p.question-link {
+    overflow: hidden;
+    opacity: 0; /* Initially hide the entire p */
+    animation: fadeIn 1s ease-in-out forwards; /* Use the fadeIn animation with 1 second duration */
+  }
+  
+
+  /* Style for the paragraph */
+  p {
+    display: inline; /* Display paragraph as an inline element */
+    margin-left: 10px;
+    text-align: justify; /* Add some spacing between image and paragraph */
+  }
+  
+        
+  .title{
+  margin-top: 5px;
+  margin-left: -3.5px;
+  }
+  .benifit{
+    margin-left: -10px;
+    padding-left:10px;
+    display: block;
+    margin-bottom: -6px;
+  }
+  .eligibility{
+    margin-left: -10px;
+    margin-top: 0px;
+    padding-left: 10px;
+  }
+
+  p p .description{
+    text-align: justify;
+    margin-top: 30px;
+    white-space: wrap;
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+    justify-content:right;
+
+
+}
+  
+  div.box{
+    padding: 10px;
+    padding-left: 20px;
+    border-radius: 30px;
+    align-items: center;
+	  margin: 0;
+    
+  }
+
+  #mySidenav a {
+    position: absolute;
+    left: -325px;
+    margin:auto,0;
+    transition: 1s;
+    padding: 15px;
+    width: 340px;
+    height: 35em;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    border-radius: 0 7px 7px 0;
+    margin-top: 1.5em;
+    
+  } 
+  .list{
+    font-size:small;
+    text-align:left;
+    line-height: 35px;
+    transition: opacity 0.3s ease; 
+    display: inline-block;
+    padding: left 20px;
+    margin-left: 10px;
+    margin-right: 20px;
+  }
+  p #about {
+  top: 20px;
+  padding:100px;
+  text-align: center;
+  backdrop-filter: blur(50px);
+}
+#mySidenav a:hover {
+  left: 0;
+  box-shadow: 0 5px 15px rgba(63, 224, 77, 0.87);
+}
+
+.taskbar {
+    position: fixed;
+    top: 0;
+    right: -300px; /* Hide the taskbar initially */
+    width: 260px;
+    height: 100vh;
+    background-color: #333;
+    background-color: rgba(255, 255, 255, 0.036)  !important; 
+    backdrop-filter: blur(5px);
+    color: #fff;
+    padding: 20px;
+    transition: right 1s ease;
+    text-align: center;
+    z-index: 999;
+  }
+
+  /* Styles for taskbar links */
+  .taskbar a {
+    display: block;
+    padding: 10px 0;
+    text-decoration: none;
+    color: #fff;
+    font-size: 2px;
+    transition: background-color 0.3s ease;
+    text-align: center;
+
+  }
+
+  /* Hover effect for taskbar links */
+  .taskbar a:hover {
+    background-color: rgba(255, 255, 255, 0)  !important; 
+    box-shadow: 0 5px 15px rgba(63, 224, 77, 0.87);
+    backdrop-filter: blur(5px);
+    left: 0;
+    
+  }
+
+  /* Styles for the content area */
+  .content {
+    margin-right: 250px; /* Adjust margin to accommodate taskbar */
+    padding: 20px;
+  }
+
+  /* Style for the button to toggle taskbar visibility */
+  .toggle-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 24px;
+    z-index: 1000;
+  }
+  .taskbar div{
+    font-size: 18px;
+    margin-top: 5px;
+  }
+  #bgVideo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: 100px;;
+    height: 100px;;
+    z-index: -1;
+    object-fit: cover;
+  }

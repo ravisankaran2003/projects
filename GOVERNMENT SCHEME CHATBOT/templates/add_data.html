@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Question and Response</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            background: rgb(44, 47, 59);
+            background: -webkit-linear-gradient(to right, rgb(40, 59, 34), rgb(54, 60, 70), rgb(32, 32, 43));
+            background: linear-gradient(to right, rgb(38, 51, 61), rgb(50, 55, 65), rgb(33, 33, 78));
+            color: white; /* Set text color to white */
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+        }
+        form {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        label {
+            font-weight: bold;
+        }
+        textarea {
+            height: 150px;
+        }
+        .logout-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding-right: 8px;
+        }
+        .fa{
+            padding-left: 4px;
+        }
+        .btn{
+            margin-left: 45%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="/logout"><button class="btn btn-danger logout-btn">Logout<i class="fa fa-power-off" style="font-size:18px"></i></button></a>
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <h1 class="text-center mb-4">ADD Q & R </h1>
+                <form action="/add_data" method="POST" onsubmit="return showSuccessAlert()">
+                    <div class="form-group">
+                        <label for="question">Question:</label>
+                        <input type="text" class="form-control" id="question" name="question" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="response">Response:</label>
+                        <textarea class="form-control" id="response" name="response" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="category">Category (optional):</label>
+                        <input type="text" class="form-control" id="category" name="category">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Add Data</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function showSuccessAlert() {
+            // Here you can perform any checks if the data is successfully added
+            // For demonstration, let's assume it's always successful
+            alert("Data added successfully!");
+            return true; // Returning true allows form submission to proceed
+        }
+    </script>
+</body>
+</html>
