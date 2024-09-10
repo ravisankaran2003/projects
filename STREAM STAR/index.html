@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stream Star - Login</title>
+    <style>
+        /* Common Styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+        }
+
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #1f1f1f;
+            padding: 20px;
+            border-bottom: 2px solid #2e2e2e;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 50px;
+            height: 50px;
+            margin-right: 15px;
+            border-radius: 50%;
+        }
+
+        h1 {
+            font-size: 2em;
+            margin: 0;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+        }
+
+        .login-container {
+            background-color: #1f1f1f;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .login-container h2 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .login-container input {
+            width: 95%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #333;
+            background-color: #333;
+            color: #ffffff;
+        }
+
+        .login-container button {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            background-color: #f1c40f;
+            color: #ffffff;
+            cursor: pointer;
+            font-weight: 400;
+            font-size: 18px;
+        }
+
+        .login-container button:hover {
+            background-color: #f1c40f;
+        }
+
+        .login-container .options {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+        }
+
+        .login-container .options a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .login-container .options a:hover {
+            color: #f1c40f;
+        }
+        #error{
+            color: red;
+
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="/MEDIA/IMAGES/MOVIE IMAGES/applogo2.JPG" alt="Stream Star Logo">
+            <h1>Stream Star</h1>
+        </div>
+    </header>
+    <main>
+        <div class="login-container">
+            <h2>Login</h2>
+            <input type="text" placeholder="Username 'ravi'"  required id="username">
+            <input type="password" placeholder="Password '1234'" required id="password">
+            <p id="error"></p>
+            <button onclick="loginValidation()">Login</button>
+            <div class="options">
+                
+                <a href="/HTML/credentials/forgot-password.html">Forgot Password?</a>
+                <a href="/HTML/credentials/signup.html">Sign Up</a>
+            </div>
+        </div>
+    </main>
+    <script src="/JS/script.js"></script>
+</body>
+</html>
